@@ -1,0 +1,75 @@
+public  class  Nhanvien {
+    // Khai báo các thuộc tính của lớp Nhanvien
+    private  String  tenNhanVien ; // Tên nhân viên
+    tư nhân  đôi  lượngCoBan ; // Lương cơ bản
+     kép  riêng heSoLuong ; // Hệ số lương
+    private  static  double  Luong_max = 10000000 ; // Lương tối đa
+
+    // Hàm khởi tạo của lớp Nhanvien
+    public  Nhanvien ( String  tenNhanVien , double  luongCoBan , double  heSoLuong ) {
+        này . tenNhanVien = tenNhanVien ;
+        này . luongCoBan = luongCoBan ;
+        này . heSoLuong = heSoLuong ;
+    }
+
+    // Phương thức tính lương của nhân viên
+    công  đôi  tinhLuong () {
+        return  luongCoBan * heSoLuong ;
+    }
+
+    // Phương thức trong thông tin của nhân viên
+    public  void  inTTin () {
+        Hệ thống . ra . println ( "Tên nhân viên: " + tenNhanVien );
+        Hệ thống . ra . println ( "Lương cơ bản: " + luongCoBan );
+        Hệ thống . ra . println ( "Hệ số lương: " + heSoLuong );
+        Hệ thống . ra . println ( "Luong: " + tinhLuong ());
+    }
+
+    // Phương thức tăng hệ số lương của nhân viên
+    public  boolean  tangLuong ( double  tangHeSoLuong ) {
+        double  newHeSoLuong = heSoLuong + tangHeSoLuong ;
+        if ( tinhLuongMax ( newHeSoLuong )) { // Kiểm tra lương của nhân viên có quá mức lương tối đa không
+            trả về  sai ;
+        }
+        heSoLuong = newHeSoLuong ;
+        trả về  đúng ;
+    }
+
+    // Phương thức tính lương tối đa của nhân viên khi thay đổi hệ thống lương
+    private  boolean  tinhLuongMax ( double  newHeSoLuong ) {
+        return  tinhLuong () > Luong_max && tinhLuong ( newHeSoLuong ) > Luong_max ;
+    }
+
+    // Các phương thức get và set cho các thuộc tính của lớp Nhanvien
+    public  String  getTenNhanVien () {
+        quay  tenNhanVien ;
+    }
+
+    public  void  setTenNhanVien ( String  tenNhanVien ) {
+        này . tenNhanVien = tenNhanVien ;
+    }
+
+    công  đôi  getLuongCoBan () {
+        trả về  luongCoBan ;
+    }
+
+    public  void  setLuongCoBan ( double  luongCoBan ) {
+        này . luongCoBan = luongCoBan ;
+    }
+
+    công  đôi  getHeSoLuong () {
+        trả về  heSoLuong ;
+    }
+
+    public  void  setHeSoLuong ( double  heSoLuong ) {
+        này . heSoLuong = heSoLuong ;
+    }
+
+    public  static  double  getLuong_max () {
+        trả về  Luong_max ;
+    }
+
+    public  static  void  setLuong_max ( double  luong_max ) {
+        luong_max = luong_max ;
+    }
+}
